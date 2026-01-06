@@ -8,21 +8,16 @@ const Navbar = () => {
     const [isSheetOpen, setIsSheetOpen] = useState(false);
 
     useEffect(() => {
-        let ticking = false;
-        const onScroll = () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrolled = window.scrollY > 50;
-                    setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
-                    ticking = false;
-                });
-                ticking = true;
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
             }
         };
 
-        // passive listener to avoid blocking touch/pointer events
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const navLinks = [
@@ -61,7 +56,7 @@ const Navbar = () => {
                     ))}
                     <a href="/CV/Profile%20(1).pdf" target="_blank" rel="noopener noreferrer" className="ml-6">
                         <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-lg px-6 py-3 text-sm font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-200 active:scale-95">
-                            Download CV
+                            View / Download CV
                         </Button>
                     </a>
                 </div>
@@ -96,10 +91,14 @@ const Navbar = () => {
                                 <div className="pt-6 border-t border-slate-200 mt-2 space-y-3">
                                     <a href="/CV/Profile%20(1).pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsSheetOpen(false)}>
                                         <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-lg transition-all py-3">
-                                            Download CV
+                                            View / Download CV
                                         </Button>
                                     </a>
-                                    
+                                    <a href="#contact" onClick={() => setIsSheetOpen(false)}>
+                                        <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-lg transition-all py-3">
+                                            Contact Me
+                                        </Button>
+                                    </a>
                                 </div>
                             </div>
                         </SheetContent>

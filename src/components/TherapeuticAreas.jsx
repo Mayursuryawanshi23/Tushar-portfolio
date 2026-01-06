@@ -70,24 +70,12 @@ const TherapeuticAreas = () => {
                         >
                             {/* Image Container */}
                             <div className="relative w-full h-32 overflow-hidden bg-slate-100">
-                                {(() => {
-                                    const base = area.imageSrc.replace(/\.(png|jpe?g)$/i, "");
-                                    const webp480 = `${base}-480.webp`;
-                                    const webp800 = `${base}-800.webp`;
-                                    return (
-                                        <img
-                                            src={area.imageSrc}
-                                            srcSet={`${webp480} 480w, ${webp800} 800w`}
-                                            sizes="(min-width: 768px) 320px, 280px"
-                                            alt={area.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
-                                            loading="lazy"
-                                            decoding="async"
-                                            width="320"
-                                            height="180"
-                                        />
-                                    );
-                                })()}
+                                <img
+                                    src={area.imageSrc}
+                                    alt={area.title}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                                    loading="lazy"
+                                />
                             </div>
 
                             {/* Content Container */}
