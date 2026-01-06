@@ -12,10 +12,14 @@ const Hero = () => {
                 <div className="min-[600px]:hidden flex items-center justify-center pt-6 mb-5">
                     <div className="w-[115px] h-[110px] rounded-full overflow-hidden mx-auto shadow-sm ring-1 ring-slate-900/5">
                         <img
-                            src="public\profilepic\download.png"
+                            src="/profilepic/download.png"
+                            srcSet="/profilepic/download-480.webp 480w, /profilepic/download-800.webp 800w, /profilepic/download-1200.webp 1200w"
+                            sizes="(max-width: 600px) 115px, 180px"
                             alt="Profile - Tushar Nikumbh"
                             className="w-full h-full object-contain"
                             loading="lazy"
+                            width="115"
+                            height="110"
                         />
                     </div>
                 </div>
@@ -78,10 +82,14 @@ const Hero = () => {
                 >
                     <div className="w-full rounded-2xl overflow-hidden">
                         <img
-                            src="public\profilepic\download.png"
+                            src="/profilepic/download.png"
+                            srcSet="/profilepic/download-480.webp 480w, /profilepic/download-800.webp 800w, /profilepic/download-1200.webp 1200w"
+                            sizes="(min-width: 1024px) 40vw, 80vw"
                             alt="Professional Portrait - Tushar Nikumbh"
                             className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 ease-out"
                             loading="lazy"
+                            width="608"
+                            height="608"
                             style={{ maxHeight: '608px' }}
                         />
                     </div>

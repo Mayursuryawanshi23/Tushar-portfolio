@@ -367,20 +367,6 @@
     scroll-snap-stop: always;
   }
 
-/* Make sections full viewport height on larger screens to enable cinematic paging */
-@media (min-width: 1024px) {
-  main {
-    /* keep Lenis handling the scroll; hide overflow to avoid native bounce */
-    overflow: hidden;
-  }
-
-  main > section {
-    min-height: 100vh;
-    display: block;
-    box-sizing: border-box;
-  }
-}
-
   /* Add crystal reflection to cards */
   .glass-card {
     position: relative;

@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://your-domain.com/sitemap.xml
-# If you have private paths, disallow them here
-# Disallow: /admin
