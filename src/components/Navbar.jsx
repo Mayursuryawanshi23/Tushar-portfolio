@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -7,18 +7,17 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isSheetOpen, setIsSheetOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+    const handleScroll = useCallback(() => {
+        const scrolled = window.scrollY > 50;
+        if (scrolled !== isScrolled) {
+            setIsScrolled(scrolled);
+        }
+    }, [isScrolled]);
 
-        window.addEventListener("scroll", handleScroll);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [handleScroll]);
 
     const navLinks = [
         { name: "About", href: "#about" },
@@ -56,7 +55,7 @@ const Navbar = () => {
                     ))}
                     <a href="/CV/Profile%20(1).pdf" target="_blank" rel="noopener noreferrer" className="ml-6">
                         <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-lg px-6 py-3 text-sm font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-200 active:scale-95">
-                            View / Download CV
+                             Download CV
                         </Button>
                     </a>
                 </div>
@@ -91,7 +90,7 @@ const Navbar = () => {
                                 <div className="pt-6 border-t border-slate-200 mt-2 space-y-3">
                                     <a href="/CV/Profile%20(1).pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsSheetOpen(false)}>
                                         <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-lg transition-all py-3">
-                                            View / Download CV
+                                            Download CV
                                         </Button>
                                     </a>
                                     <a href="#contact" onClick={() => setIsSheetOpen(false)}>

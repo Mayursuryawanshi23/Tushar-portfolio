@@ -29,7 +29,7 @@ const Contact = () => {
             <div className="container mx-auto px-4 md:px-8 max-w-6xl">
 
                 {/* Main Card Container */}
-                <div className="glass-card bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-slate-200/80 grid md:grid-cols-2 min-h-[500px] hover:shadow-3xl hover:border-slate-300/80 transition-all duration-500">
+                <div className="glass-card bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-slate-200/80 grid md:grid-cols-2 min-h-[500px] hover:shadow-3xl hover:border-slate-300/80 transition-colors duration-300">
 
                     {/* LEFT COLUMN: Contact Image */}
                     <div className="relative bg-gradient-to-br from-slate-50/50 to-slate-100/50 backdrop-blur-sm border-r border-slate-200/50 flex items-center justify-center p-8 overflow-hidden h-full order-last md:order-first group">
@@ -61,7 +61,7 @@ const Contact = () => {
                                         name="name"
                                         placeholder="Name"
                                         required
-                                        className="bg-white/80 border-slate-300 focus:border-slate-600 focus:ring-1 focus:ring-slate-400 focus:shadow-lg h-10 rounded-lg text-slate-900 placeholder:text-slate-400 transition-all shadow-sm backdrop-blur-sm"
+                                        className="bg-white/80 border-slate-300 focus:border-slate-600 focus:ring-1 focus:ring-slate-400 focus:shadow-lg h-10 rounded-lg text-slate-900 placeholder:text-slate-400 transition-colors duration-200 shadow-sm backdrop-blur-sm"
                                         value={formData.name}
                                         onChange={handleChange}
                                     />
@@ -73,7 +73,7 @@ const Contact = () => {
                                         type="email"
                                         placeholder="Email"
                                         required
-                                        className="bg-white/80 border-slate-300 focus:border-slate-600 focus:ring-1 focus:ring-slate-400 focus:shadow-lg h-10 rounded-lg text-slate-900 placeholder:text-slate-400 transition-all shadow-sm backdrop-blur-sm"
+                                        className="bg-white/80 border-slate-300 focus:border-slate-600 focus:ring-1 focus:ring-slate-400 focus:shadow-lg h-10 rounded-lg text-slate-900 placeholder:text-slate-400 transition-colors duration-200 shadow-sm backdrop-blur-sm"
                                         value={formData.email}
                                         onChange={handleChange}
                                     />

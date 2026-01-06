@@ -1,0 +1,5 @@
+- [ ] Optimize BackgroundAnimation: Reduce animation complexity, use transform3d, reduce duration
+- [ ] Optimize Navbar scroll listener: Use passive listener and throttling
+- [ ] Optimize Hero animations: Reduce duration, use will-change
+- [ ] Add smooth scrolling behavior
+- [ ] Test performance improvements

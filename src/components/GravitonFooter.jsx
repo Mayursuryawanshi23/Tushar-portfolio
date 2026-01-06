@@ -7,17 +7,17 @@ const GravitonFooter = () => {
                 <div className="flex items-center justify-end gap-2">
                     {/* Simple Logo - Circle with G */}
                     <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-black font-bold text-xs">G</span>
+                        <span className="text-black font-bold text-xs">AG</span>
                     </div>
                     
                     {/* Agency Name with Link */}
                     <a 
-                        href="https://gravitonlabs.io" 
+                        href="https://Antigravitonlabs.io" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-white text-sm font-semibold hover:underline transition-all"
                     >
-                        Graviton Labs
+                        AntiGraviton Labs
                     </a>
                 </div>
             </div>
