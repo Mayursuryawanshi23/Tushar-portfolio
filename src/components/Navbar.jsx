@@ -93,11 +93,7 @@ const Navbar = () => {
                                             Download CV
                                         </Button>
                                     </a>
-                                    <a href="#contact" onClick={() => setIsSheetOpen(false)}>
-                                        <Button className="w-full bg-slate-900 text-white hover:bg-slate-800 rounded-lg transition-all py-3">
-                                            Contact Me
-                                        </Button>
-                                    </a>
+                                    
                                 </div>
                             </div>
                         </SheetContent>
