@@ -18,6 +18,7 @@ const Hero = () => {
                             alt="Profile - Tushar Nikumbh"
                             className="w-full h-full object-contain"
                             loading="lazy"
+                            decoding="async"
                             width="115"
                             height="110"
                         />
@@ -88,6 +89,7 @@ const Hero = () => {
                             alt="Professional Portrait - Tushar Nikumbh"
                             className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 ease-out"
                             loading="lazy"
+                            decoding="async"
                             width="608"
                             height="608"
                             style={{ maxHeight: '608px' }}
