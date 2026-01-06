@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="min-[600px]:hidden flex items-center justify-center pt-6 mb-5">
                     <div className="w-[115px] h-[110px] rounded-full overflow-hidden mx-auto shadow-sm ring-1 ring-slate-900/5">
                         <img
-                            src="public\profilepic\download.png"
+                            src="/profilepic/download.png"
                             alt="Profile - Tushar Nikumbh"
                             className="w-full h-full object-contain"
                             loading="lazy"
@@ -79,7 +79,7 @@ const Hero = () => {
                 >
                     <div className="w-full rounded-2xl overflow-hidden">
                         <img
-                            src="public\profilepic\download.png"
+                            src="/profilepic/download.png"
                             alt="Professional Portrait - Tushar Nikumbh"
                             className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 ease-out"
                             loading="lazy"
