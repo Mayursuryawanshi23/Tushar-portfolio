@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,12 +20,8 @@ const Hero = () => {
                 </div>
 
                 {/* Left Content */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                <div
                     className="space-y-8 z-10 min-[600px]:w-[62%] lg:w-[60%] min-[600px]:order-first text-center min-[600px]:text-left"
-                    style={{ willChange: "transform, opacity" }}
                 >
                     <div className="space-y-3">
                         <h2 className="text-sm md:text-base font-semibold tracking-wider text-slate-500 uppercase">
@@ -67,26 +62,23 @@ const Hero = () => {
                             <p className="text-sm text-slate-500 mt-1 uppercase tracking-wide">Studies Led</p>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
 
                 {/* Large image (>=600px) - right column on larger screens */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                <div
                     className="hidden min-[600px]:flex min-[600px]:order-last min-[600px]:w-[38%] lg:w-[40%] items-center justify-center"
                 >
                     <div className="w-full rounded-2xl overflow-hidden">
                         <img
                             src="/profilepic/download.png"
                             alt="Professional Portrait - Tushar Nikumbh"
-                            className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500 ease-out"
-                            loading="lazy"
+                            className="w-full h-auto object-contain"
+                            loading="eager"
                             style={{ maxHeight: '608px' }}
                         />
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
